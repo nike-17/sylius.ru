@@ -393,12 +393,13 @@ module.exports = function (grunt) {
         connectCommits: false,
         message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
       },
-     production: {
-       options: {
-         remote: 'ssh://root@sylius.ru/git/sylius.git',
-         branch: 'master'
-       }
-     }
+      heroku: {
+        options: {
+          remote: 'heroku',
+          branch: 'master'
+        }
+      },
+
     },
 
     // Run some tasks in parallel to speed up the build process
